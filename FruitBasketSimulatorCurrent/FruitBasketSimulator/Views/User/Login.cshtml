@@ -1,0 +1,21 @@
+﻿@model FruitBasketSimulator.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm("Login", "User", FormMethod.Post))
+{
+
+    <div>
+
+        <p>Username:    @Html.TextBoxFor(x => x.loginUsername) </p>
+        <p>Password:    @Html.TextBoxFor(x => x.loginPassword) </p>
+           
+            <input type="submit" value="Log In" />
+
+    </div>
+}

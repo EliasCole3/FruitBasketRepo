@@ -1,0 +1,108 @@
+﻿@model FruitBasketSimulator.Domain.Fruit.FruitBasket
+
+@{
+    ViewBag.Title = "ShowFruitBasket";
+    Layout = "~/Views/Shared/_FruitBasketLayout.cshtml";
+}
+
+
+ 
+ <div id="fruit">
+ 
+ @{
+        foreach(var apple in Model.AppleList)
+        {
+           <img src="@apple.FileURL">
+        }
+        
+        foreach(var banana in Model.BananaList)
+        {
+           <img src="@banana.FileURL">
+        }
+        
+        foreach(var grapes in Model.GrapesList)
+        {
+           <img src="@grapes.FileURL">
+        }
+        
+        foreach(var kiwi in Model.KiwiList)
+        {
+           <img src="@kiwi.FileURL">
+        }
+        
+        foreach(var melon in Model.MelonList)
+        {
+           <img src="@melon.FileURL">
+        }
+        
+        foreach(var orange in Model.OrangeList)
+        {
+           <img src="@orange.FileURL">
+        }
+ 
+        }
+ 
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+@* @{
+        foreach(var apple in Model.AppleList)
+        {
+            @apple.AppleId 
+            @apple.Color
+            @apple.Type
+           <img src="@apple.FileURL">
+        }
+        
+        foreach(var banana in Model.BananaList)
+        {
+            @banana.BananaId
+            @banana.Color
+            @banana.NumberOfSpots
+           <img src="@banana.FileURL">
+        }
+        
+        foreach(var grapes in Model.GrapesList)
+        {
+            @grapes.GrapesId
+            @grapes.Color
+           <img src="@grapes.FileURL">
+        }
+        
+        foreach(var kiwi in Model.KiwiList)
+        {
+            @kiwi.KiwiId
+            @kiwi.Type
+
+           <img src="@kiwi.FileURL">
+        }
+        
+        foreach(var melon in Model.MelonList)
+        {
+            @melon.MelonId
+            @melon.Color
+            @melon.Type
+
+           <img src="@melon.FileURL">
+        }
+        
+        foreach(var orange in Model.OrangeList)
+        {
+            @orange.OrangeId
+            @orange.Color
+            @orange.Type
+            
+           <img src="@orange.FileURL">
+        }
+        
+        }*@

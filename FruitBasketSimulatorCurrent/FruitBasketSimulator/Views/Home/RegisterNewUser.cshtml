@@ -1,0 +1,20 @@
+﻿@model FruitBasketSimulator.Models.RegisterNewUserVM
+
+@{
+    ViewBag.Title = "RegisterNewUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>RegisterNewUser</h2>
+
+
+
+    @using (Html.BeginForm("RegisterNewUser", "Home")) 
+    {
+      
+        @Html.EditorForModel()
+
+        
+        <input type="submit" value="Submit New User Info" />
+    }
+

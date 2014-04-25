@@ -1,0 +1,38 @@
+﻿@model IEnumerable<FruitBasketSimulator.Domain.Users.RegisteredUser>
+
+@{
+    ViewBag.Title = "Admin: Registered Users";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Registered Users</h1>
+
+<table class="Grid">
+    <tr>
+        <th>ID</th>
+        <th>UserName</th>
+        <th>Access Level</th>
+        <th>Password</th>
+        <th>Actions</th>
+    </tr>
+
+        @foreach (var item in Model) 
+        {
+        <tr>
+            <td>@item.RegisteredUserId</td>
+            <td>@Html.ActionLink(item.Username, "Edit2", new { item.RegisteredUserId})</td> @*//Name of Registered user, Action method, parameter for action method*@
+            <td>@item.AccessLevel.ToString()</td>
+            <td>@item.Password</td>
+
+            <td>
+            @using (Html.BeginForm("Delete", "Admin")) 
+            {
+            @Html.Hidden("RegisteredUserId", item.RegisteredUserId)
+                <input type="submit" value="Delete"/>
+            }
+            </td>
+        </tr>
+        }
+</table>
+
+<p>@Html.ActionLink("Add a new Registered User", "Create2")</p>

@@ -1,0 +1,26 @@
+﻿@model FruitBasketSimulator.Models.RegisteredUserViewModel
+
+@{
+    ViewBag.Title = "ListRegisteredUsers";
+}
+
+<h2>ListRegisteredUsers</h2>
+
+@foreach (var user in Model.RegisteredUsers) {
+
+    
+<em>UserName:</em>
+    
+@user.Username<br>
+    
+<em>Access Level:</em>
+  
+@user.AccessLevel<br>
+      
+        <br>
+}
+
+
+<div class="pager">
+@Html.PageLinks(Model.PagingInfo, x => Url.Action("ListRegisteredUsers", new {page = x}))
+</div>

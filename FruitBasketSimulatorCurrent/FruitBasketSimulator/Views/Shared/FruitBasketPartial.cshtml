@@ -1,0 +1,17 @@
+﻿@model FruitBasketSimulator.Domain.Fruit.FruitBasket
+
+<img src="~/Images/Fruit/Apple1small.jpg">
+
+@{
+        foreach(var apple in Model.AppleList)
+        {
+            @apple.AppleId <br>
+            @apple.Color<br>
+            @apple.Type<br>
+           <img src="@apple.FileURL">
+        <br>
+        
+        }
+    }
+
+@*dead branch*@

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+    <div>
+
+        @*messages*@
+        @if (TempData["message"] != null) 
+        {
+            <div class="Message">@TempData["message"]</div>
+        }
+
+        @*SignIn/SignOut*@
+        <div style="width: auto; background-color: #728ea7;">
+            @if (Request.IsAuthenticated) 
+            {
+                <strong>@Html.Encode(User.Identity.Name)</strong>
+                @Html.ActionLink("Sign Out", "Logout", "User")
+            }
+            
+            else 
+            {
+                @Html.ActionLink("Register", "Register", "User")
+                <span> | </span>
+                @Html.ActionLink("Sign In", "Login", "User")
+            }
+        </div>
+
+        @*Navigation*@
+        <div id="categories">
+             @Html.Partial("Navigation")
+        </div>
+
+
+
+
+
+        
+        <div id="FruitBasketBody">
+             @RenderBody()
+        </div>
+
+
+    </div>
+</body>
+</html>

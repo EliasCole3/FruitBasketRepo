@@ -1,0 +1,32 @@
+﻿@model FruitBasketSimulator.Models.FruitBasketViewModel
+
+@{
+    ViewBag.Title = "CreateFruitBasket";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CreateFruitBasket</h2>
+
+
+ @using (Html.BeginForm()) 
+    {
+        <p>Leave blank for new fruitbasket</p>
+     
+        <p>Fruit Basket ID:    @Html.TextBoxFor(x => x.FruitBasketId) </p>
+     
+        <p>New Apple ID:    @Html.TextBoxFor(x => x.Apple.AppleId) </p>
+     
+        <p>New Banana ID:    @Html.TextBoxFor(x => x.Banana.BananaId)</p>
+        
+        <p>New Grapes ID:    @Html.TextBoxFor(x => x.Grapes.GrapesId)</p>
+        
+        <p>New Kiwi ID:    @Html.TextBoxFor(x => x.Kiwi.KiwiId)</p>
+     
+        <p>New Melon ID:    @Html.TextBoxFor(x => x.Melon.MelonId)</p>
+     
+        <p>New Orange ID:    @Html.TextBoxFor(x => x.Orange.OrangeId)</p>
+     
+       
+        <input type="submit" value="Submit Fruit Basket" />
+    }
+

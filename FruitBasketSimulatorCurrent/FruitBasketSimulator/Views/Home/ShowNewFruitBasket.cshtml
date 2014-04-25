@@ -1,0 +1,60 @@
+﻿@model FruitBasketSimulator.Domain.Fruit.FruitBasket
+
+@{
+    ViewBag.Title = "ShowNewFruitBasket";
+    Layout = "~/Views/Shared/_FruitBasketLayout.cshtml";
+}
+
+
+<div>
+    The new FruitBasket ID is: @Model.FruitBasketId
+</div>
+
+<div id="CreateNewFB">
+    @Html.ActionLink("Create another fruit basket", "CreateFruitBasket")
+</div>
+
+
+<div id="fruit">
+
+@{
+        foreach(var apple in Model.AppleList)
+        {
+           <img src="@apple.FileURL">
+        }
+        
+        foreach(var banana in Model.BananaList)
+        {
+           <img src="@banana.FileURL">
+        }
+        
+        foreach(var grapes in Model.GrapesList)
+        {
+           <img src="@grapes.FileURL">
+        }
+        
+        foreach(var kiwi in Model.KiwiList)
+        {
+           <img src="@kiwi.FileURL">
+        }
+        
+        foreach(var melon in Model.MelonList)
+        {
+           <img src="@melon.FileURL">
+        }
+        
+        foreach(var orange in Model.OrangeList)
+        {
+           <img src="@orange.FileURL">
+        }
+}
+ 
+</div>
+
+
+
+
+ 
+ 
+ 
+ 

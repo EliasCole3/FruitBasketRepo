@@ -1,0 +1,28 @@
+﻿@model FruitBasketSimulator.Domain.Users.RegisteredUser
+
+@{
+    ViewBag.Title = "ShowNewUser";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowNewUser</title>
+</head>
+<body>
+    <div>
+        New user ID: @Model.RegisteredUserId<br>
+        New user username: @Model.Username <br>
+        New password: @Model.Password <br>
+        New access level: @Model.AccessLevel
+    </div>
+
+     <p>
+        See all Registered Users: <br/>
+        @Html.ActionLink("ShowAllUsers", "ListRegisteredUsers");
+     </p>
+
+</body>
+</html>

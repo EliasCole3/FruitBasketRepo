@@ -1,0 +1,17 @@
+﻿@model FruitBasketSimulator.Models.NewEditVM1
+
+@{
+    ViewBag.Title = "NewEdit1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>NewEdit1</h2>
+
+ @using (Html.BeginForm()) 
+    {
+        <p>Enter the ID of the fruit basket you want to edit:</p>
+     
+        <p>Fruit Basket ID:    @Html.TextBoxFor(x => x.LookupID) </p>
+       
+        <input type="submit" value="Submit Fruit Basket" />
+    }

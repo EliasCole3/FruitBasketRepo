@@ -1,0 +1,20 @@
+﻿@model FruitBasketSimulator.Models.RegisterNewUserVM
+
+@{
+    ViewBag.Title = "Admin: Edit " + @Model.Username;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Edit @Model.Username</h2>
+
+
+
+
+@using (Html.BeginForm("Edit2", "Admin"))
+{
+    @Html.EditorForModel()
+    <input type="submit" value="save">
+    @Html.ActionLink("Cancel and return to the Registered Users List", "Index")
+}
+
+
